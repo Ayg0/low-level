@@ -25,12 +25,6 @@ bool xor(bool a, bool b)
 	return (or(and(not(a), b), and(a, not(b))));
 }
 
-int	addition(int a, int b)
-{
-	
-	return;
-}
-
 int	main(int ac, char **av)
 {
 	if (ac == 3)

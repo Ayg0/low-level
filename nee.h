@@ -23,4 +23,10 @@ typedef struct
     };
 } One_byte;
 
+bool 	xor(bool a, bool b);
+bool	or(bool a, bool b);
+bool	and(bool a, bool b);
+bool	not(bool a);
+bool	nand(bool a, bool b);
+int		addition(short a, short b);
 #endif
