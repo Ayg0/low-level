@@ -28,5 +28,6 @@ bool	or(bool a, bool b);
 bool	and(bool a, bool b);
 bool	not(bool a);
 bool	nand(bool a, bool b);
-int		addition(short a, short b);
+int		addition(int a, int b, bool *carry);
+int 	add_int(int	a, int	b);
 #endif
