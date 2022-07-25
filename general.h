@@ -1,5 +1,5 @@
-#ifndef NEE_H
-#define NEE_H
+#ifndef GENERAL_H
+#define GENERAL_H
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdarg.h>

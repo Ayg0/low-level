@@ -47,23 +47,3 @@ int	addition(int a, int b, bool *carry)
 	*carry = or(add_bit(7, 0, c, d), and(*carry, add_bit(7, 1, c, d)));
 	return (e.byte);
 }
-
-
-int add_int(int	a, int	b)
-{
-	unsigned char	*c;
-	unsigned char	*d;
-	unsigned char	e[4];
-	int				*k;
-	bool			carry;
-
-	c = (char *)&a;
-	d = (char *)&b;
-	carry = 0;
-	e[0] = addition(c[0], d[0], &carry);
-	e[1] = addition(c[1], d[1], &carry);
-	e[2] = addition(c[2], d[2], &carry);
-	e[3] = addition(c[3], d[3], &carry);
-	k = (int *)e;
-	return (*k);
-}

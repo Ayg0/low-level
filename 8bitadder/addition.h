@@ -1,6 +1,6 @@
 #ifndef ADDITION_H
 #define ADDITION_H
-#include "../nee.h"
+#include "../general.h"
 
 bool	operation0(bool oper, One_byte a, One_byte b);
 bool	operation1(bool oper, One_byte a, One_byte b);

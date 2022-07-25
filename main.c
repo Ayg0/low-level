@@ -1,46 +1,28 @@
-#include "nee.h"
+#include "general.h"
 
-bool	nand(bool a, bool b)
+int add_int(int	a, int	b)
 {
-	return (!(a * b));
-}
+	char	*c;
+	char	*d;
+	char	e[4];
+	int		*k;
+	bool	carry;
 
-bool	not(bool a)
-{
-	return (nand(a, a));
-}
-
-bool	and(bool a, bool b)
-{
-	return (not(nand(a, b)));
-}
-
-bool	or(bool a, bool b)
-{
-	return (nand(not(a), not(b)));
-}
-
-bool xor(bool a, bool b)
-{
-	return (or(and(not(a), b), and(a, not(b))));
+	c = (char *)&a;
+	d = (char *)&b;
+	carry = 0;
+	e[0] = addition(c[0], d[0], &carry);
+	e[1] = addition(c[1], d[1], &carry);
+	e[2] = addition(c[2], d[2], &carry);
+	e[3] = addition(c[3], d[3], &carry);
+	k = (int *)e;
+	return (*k);
 }
 
 int	main(int ac, char **av)
 {
-	int	i;
-
-	while (i < 2147483647 / 2)
-	{
-		if (i + i != add_int(i, i))
-		{
-			printf("%d:%d != %d\n", i, i + i, add_int(i, i));
-			return (1);
-		}
-		printf("%d\n", i);
-		i++;
-	}
-	//if (ac == 3)
-	//	printf("%d\n", add_int(atoi(av[1]), atoi(av[2])));
-	//else
-	//	printf("wrong arguments\n");
+	if (ac == 3)
+		printf("%d\n", add_int(atoi(av[1]), atoi(av[2])));
+	else
+		printf("wrong arguments\n");
 }
