@@ -35,4 +35,5 @@ bool	equal_byte(char a, char b);
 int		shift_int(int a, int moves);
 int		two_complement(int a, bool bytes);
 char	shift_byte(char byte, char *rest);
+int		subs(int a, int b);
 #endif

@@ -18,7 +18,6 @@ char	byte_negative(char a, char add)
 		i = add_int(i, 1);
 	}
 	rest = 0;
-	// badalt
 	d.byte = addition(d.byte, add, (bool *)&rest);
 	return (d.byte);
 }
@@ -37,4 +36,9 @@ int	two_complement(int a, bool bytes)
 	c[3] = byte_negative(c[3], 0);
 	k = (int *)c;
 	return (add_int(*k, 1));
+}
+
+int	subs(int a, int b)
+{
+	return (add_int(a, two_complement(b, 1)));
 }
