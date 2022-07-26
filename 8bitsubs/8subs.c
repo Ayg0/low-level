@@ -18,6 +18,7 @@ char	byte_negative(char a, char add)
 		i = add_int(i, 1);
 	}
 	rest = 0;
+	// badalt
 	d.byte = addition(d.byte, add, (bool *)&rest);
 	return (d.byte);
 }
