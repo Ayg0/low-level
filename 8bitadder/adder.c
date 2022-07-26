@@ -12,7 +12,7 @@ void	set_opers(bool (*f[8])(bool oper, One_byte a, One_byte b))
 	f[7] = operation7;
 }
 
-int	add_bit(int i, bool oper, One_byte c, One_byte d)
+bool	add_bit(int i, bool oper, One_byte c, One_byte d)
 {
 	bool (*operation[8])(bool oper, One_byte a, One_byte b);
 
@@ -46,4 +46,23 @@ int	addition(int a, int b, bool *carry)
 	e.bit7 = xor(add_bit(7, 1, c, d), *carry);
 	*carry = or(add_bit(7, 0, c, d), and(*carry, add_bit(7, 1, c, d)));
 	return (e.byte);
+}
+
+int add_int(int	a, int	b)
+{
+	char	*c;
+	char	*d;
+	char	e[4];
+	int		*k;
+	bool	carry;
+
+	c = (char *)&a;
+	d = (char *)&b;
+	carry = 0;
+	e[0] = addition(c[0], d[0], &carry);
+	e[1] = addition(c[1], d[1], &carry);
+	e[2] = addition(c[2], d[2], &carry);
+	e[3] = addition(c[3], d[3], &carry);
+	k = (int *)e;
+	return (*k);
 }

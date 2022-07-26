@@ -1,6 +1,6 @@
 #include "general.h"
 
-bool	nand(bool a, bool b)
+bool	 nand(bool a, bool b)
 {
 	return (!(a * b));
 }
