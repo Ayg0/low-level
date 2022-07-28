@@ -10,7 +10,7 @@ int	shift_by(One_byte byte, int number)
 	{
 		rest = 0;
 		byte.byte = shift_byte(byte.byte, &rest);
-		add_int(i, 1);
+		i = add_int(i, 1);
 	}
 	return (byte.byte);
 }
@@ -31,10 +31,10 @@ int	multiplyer8(char a, char b)
 		rest = carry = 0;
 		input[1].byte = shift_byte(input[1].byte, &rest);
 		if (rest)
-			output[0].byte = addition(output[0].byte, shift_by(input[0], subs(8, i)), &carry);
+			output[0].byte = addition(output[0].byte, shift_by(input[0], subs(7, i)), &carry);
 		else
 			output[0].byte = addition(output[0].byte, 0, &carry);
-		add_int(i, 1);
+		i = add_int(i, 1);
 	}
 	return (output[0].byte);
 }
