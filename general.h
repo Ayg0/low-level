@@ -36,4 +36,5 @@ int		shift_int(int a, int moves);
 int		two_complement(int a, bool bytes);
 char	shift_byte(char byte, char *rest);
 int		subs(int a, int b);
+int		multiplyer8(char a, char b);
 #endif

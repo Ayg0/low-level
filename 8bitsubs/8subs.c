@@ -40,5 +40,5 @@ int	two_complement(int a, bool bytes)
 
 int	subs(int a, int b)
 {
-	return (add_int(a, two_complement(b, 1)));
+	return (add_int(a, two_complement(b, 4)));
 }
